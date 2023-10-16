@@ -1,0 +1,135 @@
+.AboutUs-section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f1f1f1; */
+}
+.AboutUs{
+    background: url(../images/book2.jpg);
+    background-repeat: no-repeat;
+    background-size: 55%;
+    /* background-color: #f1f1f1; */
+    overflow: hidden;
+    padding: 85px 0px;
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: #fff;
+    padding: 60px ;
+    border: 1px solid #8bb39a;
+
+}
+
+
+.inner-container h1{
+    color: black;
+    margin:30px ;
+    font-size: 20px;
+    font-weight:900 ;
+}
+.text{
+    font-size: 13px;
+    color: black;
+    line-height: 25px;
+    text-align: justify;
+    
+}    
+
+.skills{
+    color:black;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.team-section{
+width: 100%;
+
+}
+.team-section .team-container{
+    width: 80%;
+    margin: auto;
+}
+
+.team-section .team-container .team-row{
+    width: 60%;
+    margin: auto;
+}
+.team-section .team-container .team-row .team-title{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.team-section .team-container .team-row .team-title h1{
+    font-size: 35px ;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-color);
+}
+
+.team-section .team-container .team-row .team-title p{
+    font-size: 18px;
+    color: #8bb39a;
+}
+
+.team-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards{
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cards img{
+    width: 150px;
+}
+.team-content{
+    text-align: center;
+}
+.team-content h3{
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
+
+@media screen and (max-width:1300px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 50px;
+    }
+}
+@media screen and (max-width:1000px){
+    .AboutUs{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px){
+    .AboutUs{
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 0;
+    }
+    .inner-container{
+        padding: 30px;
+    }
+}
+
+

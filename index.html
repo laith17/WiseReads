@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Home-Page/css/Home-Page.css" />
+    <link rel="stylesheet" href="./Home-Page/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <title>WiseReads</title>
+  </head>
+  <body>
+    <!--* Start Header -->
+    <header class="header">
+      <div class="header__box">
+        <a href="./user-profile/UserProfile.html" class="logo-link">
+          <img
+            src="./Home-Page/images/logo.png"
+            alt="An image of a logo"
+            class="logo-img" />
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="list-item">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="list-item">
+              <a href="Catalog-Page/Catalog-Page.html">Catalog</a>
+            </li>
+            <li class="list-item">
+              <a href="#">News</a>
+            </li>
+            <li class="list-item">
+              <a href="./About-Us/About-Us.html">About Us</a>
+            </li>
+            <li class="list-item">
+              <a href="./user-profile/contactus.html">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__box2">
+        <a href="./Search-Page/search-page.html" class="search__link">
+          <div class="search__btn--header">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </a>
+        <div>
+         <a href="log/register.html"> <button id="login">Login</button></a>
+         <a href="log/register.html">  <button id="signUp">Sign Up</button></a>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </header>
+    <!--* End Header -->
+
+    <!--* Start Hero Section -->
+    <section class="hero-section">
+      <div class="img-slider">
+        <div class="img-slider__slide active">
+          <img
+            src="/Home-Page/images/slider-img1.jpg"
+            alt="An image of some books" />
+          <div class="img-slider__info">
+            <h2>Slide 01</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+              dignissimos ab delectus nihil tempore quia velit autem, iure
+              cupiditate dolore dolor, temporibus similique officia odit quas
+              voluptate sunt ea quo.
+            </p>
+          </div>
+        </div>
+        <div class="img-slider__slide">
+          <img
+            src="/Home-Page/images/slider-img2.jpg"
+            alt="An image of some books" />
+          <div class="img-slider__info">
+            <h2>Slide 02</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+              dignissimos ab delectus nihil tempore quia velit autem, iure
+              cupiditate dolore dolor, temporibus similique officia odit quas
+              voluptate sunt ea quo.
+            </p>
+          </div>
+        </div>
+        <div class="img-slider__slide">
+          <img
+            src="/Home-Page/images/slider-img3.jpg"
+            alt="An image of some books" />
+          <div class="img-slider__info">
+            <h2>Slide 03</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+              dignissimos ab delectus nihil tempore quia velit autem, iure
+              cupiditate dolore dolor, temporibus similique officia odit quas
+              voluptate sunt ea quo.
+            </p>
+          </div>
+        </div>
+        <div class="img-slider__navigation--arrows">
+          <i class="fas fa-chevron-left prev-btn"></i>
+          <i class="fas fa-chevron-right next-btn"></i>
+        </div>
+        <div class="img-slider__navigation--btns">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+    </section>
+    <!--* End Hero Section -->
+
+    <main>
+      <!--* Start Books Section -->
+      <section class="books-section">
+        <div class="container">
+          <div class="books">
+            <h1 class="books__heading">Books</h1>
+            <div class="books__grid">
+              <template data-book-template>
+                <div class="book__card">
+                  <a href="" class="book__link">
+                    <img
+                      src=""
+                      alt="A photo for a book cover"
+                      class="book__img" />
+                    <div class="book__overlay">
+                      <p>Read More</p>
+                    </div>
+                  </a>
+                  <p class="book__author"></p>
+                  <p class="book__title"></p>
+                  <a href="./user-profile/favourite.html"><i class="fa-regular fa-heart" style="font-size:2.5rem; "></i></a>
+                  <a href="#"><i class="fa-solid fa-heart" style="font-size:2.5rem; display:none;"></i></a>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+        <div class="features">
+          <div class="features__content">
+            <h4>Heading</h4>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, nulla eveniet! Delectus error, molestiae, magni nisi
+              obcaecati id praesentium.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--* End Books Section -->
+
+      
+  <!-- New books section -->
+  <section class="newBooks-section">
+    <div class="container">
+      <h1 class="newBooks-heading" style="margin-top: 10rem;">New Books</h1>
+      <div class="newBooks-scroll " style="display: flex;">
+      <div class="newBooks-arrow " style=" margin-top: 15rem;  cursor: pointer;">
+        <i id="left" class="fa-solid fa-angle-left" style="font-size: xxx-large;"></i>
+      </div>
+     
+      <div class="newBooks " id="newBooks">
+      
+        <!-- cards for new books  -->
+     
+      </div>
+    
+      <div class="newBooks-arrow " style=" margin-top: 15rem; cursor: pointer; ">
+        <i id="right" class="fa-solid fa-angle-right" style="font-size: xxx-large;"></i>
+      </div>
+      
+      </div>
+    </div>
+
+    <div class="new-features">
+      <div class="new-features__content">
+        <h4>Heading</h4>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Excepturi, nulla eveniet! Delectus error, molestiae, magni nisi
+          obcaecati id praesentium.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Top books section -->
+<section class="topBooks-section">
+  <div class="container" >
+    <h1 class="topBooks-heading">Top 100 Books</h1>
+    <div id="topBooks">
+<!-- cards for Top books  -->
+    </div>
+  </div>
+</section>
+       
+    </main>
+<!--* Start Footer Section -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__links">
+      <div class="nav-footer">
+        <h3 class="nav-footer__heading">Pages</h3>
+        <ul class="nav-footer__links">
+          <li class="link-item">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="link-item">
+            <a href="#">Books Catalog</a>
+          </li>
+          <li class="link-item">
+            <a href="./Search-Page/search-page.html">Books Search</a>
+          </li>
+          <li class="link-item">
+            <a href="./About-Us/About-Us.html">About Us</a>
+          </li>
+          <li class="link-item">
+            <a href="./user-profile/contactus.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-quickLinks">
+        <div class="footer-quickLinks__box">
+          <h3 class="footer-quickLinks__heading">Quick Links</h3>
+          <ul class="footer-quickLinks__links">
+            <li class="link-item">
+              <a href="FAQ/FAQ.html">FAQ</a>
+            </li>
+            <li class="link-item">
+              <a href="./privacy page/privacy.html">Privacy Policy</a>
+            </li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-socialmedia">
+        <h3 class="footer-socialmedia__heading">Follow Us</h3>
+        <p class="footer-socialmedia__text">
+          Stay in touch with by following us on social media.
+        </p>
+        <ul class="footer-socialmedia__links">
+          <li class="link-item">
+            <a href="#" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li class="link-item">
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+          <li class="link-item">
+            <a href="#">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <p class="copyright">WiseReads&copy;Copyright 2023. Made by Laith Al-Majali</p>
+</footer>
+
+<!--* End Footer Section -->
+    <script src="./Home-Page/javascript/Home-Page.js"></script>
+  </body>
+</html>

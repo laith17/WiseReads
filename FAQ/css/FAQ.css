@@ -1,0 +1,151 @@
+:root{ 
+--primary-color: #59926f;
+  --secondary-color: #8bb39a;
+  --ternary-color: #62b6b7;
+  --hover-color: #7c81ad;
+  --white-color: #cbedd5;
+}
+
+
+/* Start FAQ hero section  */
+.questions {
+  height: 36rem; /* You can adjust this to your design requirements */
+  margin: 0 auto; /* Center horizontally */
+  background: linear-gradient(
+    rgba(30, 30, 30, 0.578), 
+    rgba(30, 30, 30, 0.578)),
+             
+    url("/FAQ/images/questions3.jpg") center/cover no-repeat;
+  color: var(--white-color); /* Ensure that this variable is defined correctly */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.questions__content {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.questions h4 {
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+}
+
+.questions p {
+  font-size: 7rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+}
+
+@media (max-width:760px) {
+  
+.questions h4 {
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+}
+
+.questions p {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+}
+/** End FAQ hero section */
+
+/* questions section  */
+.questions-section{
+       
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;             
+  align-items: start;
+  margin-top: 5rem;
+  
+}
+
+.title{
+  font-size:3rem ;
+  margin: 2rem;
+  text-align: center;
+  
+}
+.feq
+{
+max-width: 700px;  
+margin-top: 2rem;
+padding-bottom: 1rem;
+border-bottom:2px solid #000000 ;
+cursor: pointer;
+}
+.question
+{
+ display: flex;
+ justify-content: space-between;
+ align-items: center; 
+}
+.question h3
+{
+  font-size: large;
+
+}
+
+.answer
+{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease;
+}
+.answer p{
+  padding-top: 1rem;
+  line-height: 1.6rem;
+  font-size: large;
+}
+
+.feq.active .answer{
+max-height: 300px;
+animation: fade 1s ease-in-out;
+}
+.feq.active svg{
+  transform: rotate(180deg);
+}
+svg {
+transition: transform .5s ease-in;
+}
+@keyframes fade {
+from
+{
+opacity: 0;
+transform:translateY(-10px) ;
+}
+to{
+opacity: 1;
+transform: translateY(0px);
+}
+
+}
+.left-column {
+  width: 40%; /* Adjust the width as needed */
+  padding: 2rem;
+  margin-top: 3rem;
+  font-size: large;
+}
+
+.right-column {
+  width: 60%; /* Adjust the width as needed */
+  padding: 2rem;
+ 
+}
+
+
+/*End  questions section  */
+
+
