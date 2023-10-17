@@ -1,3 +1,23 @@
+//* Hamburger Menu
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".main-nav__list");
+const register_btns = document.querySelector(".register-btns");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+  register_btns.classList.toggle("active");
+});
+
+// Add event listeners to list items
+document.querySelectorAll(".list-item").forEach((element) => {
+  element.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    register_btns.remove("active");
+  });
+});
+
 //* Image Slider
 const slides = document.querySelectorAll(".img-slider__slide");
 const btns = document.querySelectorAll(".btn");
@@ -112,13 +132,16 @@ fetch("http://localhost:3000/books?_start=0&_limit=10")
       const bookAuthor = card.querySelector(".book__author");
       const bookTitle = card.querySelector(".book__title");
       const bookImage = card.querySelector(".book__img");
+      const urlParams = new URLSearchParams(window.location.search);
+      urlParams.append("type", book["type"]);
       const bookLink = card.querySelector(".book__link");
       const urlSearchParams = new URLSearchParams();
       urlSearchParams.append("id", book["id"]);
-      console.log(book["id"]);
       const href =
         "http://127.0.0.1:5500/Book-Details/Book-Details.html?" +
-        urlSearchParams.toString();
+        urlSearchParams.toString() +
+        "&" +
+        urlParams;
       bookLink.href = href;
       bookImage.src = book.image;
       bookAuthor.textContent = book.author;
@@ -126,10 +149,7 @@ fetch("http://localhost:3000/books?_start=0&_limit=10")
       bookCardContainer.appendChild(card);
     });
   });
-
 // ******************
-
-
 
 // // Get the new books from the JSON server
 // fetch("http://localhost:3000/books")
@@ -150,10 +170,10 @@ fetch("http://localhost:3000/books?_start=0&_limit=10")
 //           var newBooks_card = document.createElement('div');
 //           newBooks_card.classList.add('newBooks_card');
 //           newBooks_card.innerHTML = `
-          
+
 //             <img class="" src="${book.image}" alt="cover" width="190rem" height="280rem">
 //             <p class="newBooks-card_text">${book.author}</p>
-//             <h1 class="newBooks-card_title">${book.title}</h1> 
+//             <h1 class="newBooks-card_title">${book.title}</h1>
 
 //             <a href="#"><i class="fa-regular fa-heart" style="font-size:2.5rem; "></i></a>
 //             <a href="#"><i class="fa-solid fa-heart" style="font-size:2.5rem; display:none;"></i></a>`;
@@ -164,9 +184,7 @@ fetch("http://localhost:3000/books?_start=0&_limit=10")
 //       renderNewBooks();
 // // End Get the newBooks from the JSON server
 
-   
-
-// // Handel the slider in NewBooks-cards section 
+// // Handel the slider in NewBooks-cards section
 //       var arrowBtns = document.querySelectorAll('.newBooks-scroll i');
 //       arrowBtns.forEach(btn => {
 //         btn.addEventListener("click", () => {
@@ -184,78 +202,81 @@ fetch("http://localhost:3000/books?_start=0&_limit=10")
 //     }
 //   });
 
-        // Get the new books from the JSON server
+// Get the new books from the JSON server
 fetch("http://localhost:3000/books")
-.then(res => res.json())
-.then(books => {
+  .then((res) => res.json())
+  .then((books) => {
     if (books.length > 0) {
-        var booksArr = books;
-        var newBooks = document.getElementById("newBooks");
-        var currentStart = 0;
-        var currentEnd = 5;
-        var maxDisplayedBooks = 20;
+      var booksArr = books;
+      var newBooks = document.getElementById("newBooks");
+      var currentStart = 0;
+      var currentEnd = 5;
+      var maxDisplayedBooks = 20;
 
-        function renderNewBooks() {
-            newBooks.innerHTML = "";
+      function renderNewBooks() {
+        newBooks.innerHTML = "";
 
-            // Calculate the maximum number of books to display (up to 20)
-            var maxBooks = Math.min(currentEnd, maxDisplayedBooks);
+        // Calculate the maximum number of books to display (up to 20)
+        var maxBooks = Math.min(currentEnd, maxDisplayedBooks);
 
-            var visibleBooksArr = booksArr.slice(currentStart, maxBooks);
+        var visibleBooksArr = booksArr.slice(currentStart, maxBooks);
 
-            visibleBooksArr.forEach((book, index) => {
-                if (index < maxDisplayedBooks) {
-                    var newBooks_card = document.createElement('div');
-                    newBooks_card.classList.add('newBooks_card');
-                    //navigate the book to book detail page
-                    const urlSearchParams = new URLSearchParams();
-                    urlSearchParams.append("id", book["id"]);
-                    console.log(book["id"]);
-                    const href =
-                      "http://127.0.0.1:5500/Book-Details/Book-Details.html?" +
-                      urlSearchParams.toString();
-
-                    newBooks_card.innerHTML = `
-                       <a href="${href}"> <img class="" src="${book.image}" alt="cover" width="190rem" height="280rem"></a>
-                        <p class="newBooks-card_text">${book.author}</p>
+        visibleBooksArr.forEach((book, index) => {
+          if (index < maxDisplayedBooks) {
+            var newBooks_card = document.createElement("div");
+            newBooks_card.classList.add("newBooks_card");
+            const urlParams = new URLSearchParams(window.location.search);
+            urlParams.append("type", book["type"]);
+            const urlSearchParams = new URLSearchParams();
+            urlSearchParams.append("id", book["id"]);
+            const href =
+              "http://127.0.0.1:5500/Book-Details/Book-Details.html?" +
+              urlSearchParams.toString() +
+              "&" +
+              urlParams;
+            newBooks_card.innerHTML = `
+                    <a href="${href}" class="book__link">
+                    <img src="${book.image}" alt="cover" width="280rem" height="280rem">
+                    <div class="book__overlay">
+                      <p>Read More</p>
+                    </div>
+                  </a>                    
+                      <p class="newBooks-card_text">${book.author}</p>
                         <h1 class="newBooks-card_title">${book.title}</h1> 
                         <a href="#"><i class="fa-regular fa-heart" style="font-size:2.5rem; "></i></a>
                         <a href="#"><i class="fa-solid fa-heart" style="font-size:2.5rem; display:none;"></i></a>`;
-                  
-                  
-                  
-                        newBooks.appendChild(newBooks_card);
-                }
-            });
-
-            // Disable the right button when reaching the end
-            if (currentEnd >= booksArr.length) {
-                document.getElementById("right").style.display = "none";
-            } else {
-                document.getElementById("right").style.display = "inline-block";
-            }
-        }
-
-        renderNewBooks();
-
-        // Handle the slider in NewBooks-cards section
-        var arrowBtns = document.querySelectorAll('.newBooks-scroll i');
-        arrowBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                if (btn.id === "left" && currentStart > 0) {
-                    currentStart -= 1;
-                    currentEnd -= 1;
-                } else if (btn.id === "right" && currentEnd < booksArr.length) {
-                    currentStart += 1;
-                    currentEnd += 1;
-                }
-                renderNewBooks();
-            });
+            newBooks.appendChild(newBooks_card);
+          }
         });
+
+        // Disable the right button when reaching the end
+        if (currentEnd >= booksArr.length) {
+          document.getElementById("right").style.display = "none";
+        } else {
+          document.getElementById("right").style.display = "inline-block";
+        }
+      }
+
+      renderNewBooks();
+
+      // Handle the slider in NewBooks-cards section
+      var arrowBtns = document.querySelectorAll(".newBooks-scroll i");
+      arrowBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (btn.id === "left" && currentStart > 0) {
+            currentStart -= 1;
+            currentEnd -= 1;
+          } else if (btn.id === "right" && currentEnd < booksArr.length) {
+            currentStart += 1;
+            currentEnd += 1;
+          }
+          renderNewBooks();
+        });
+      });
     }
-});
-// End Handel the slider in NewBooks-cards section 
-// Get the top books from the JSON server
+  });
+// End Handel the slider in NewBooks-cards section
+// Fetch the books from the JSON server
 fetch("http://localhost:3000/books")
   .then((res) => res.json())
   .then((books) => {
@@ -265,24 +286,35 @@ fetch("http://localhost:3000/books")
 
       function renderTopBooks() {
         topBooks.innerHTML = "";
-        var visibleTopBooksArr = booksArr.slice(8,11 );
 
-        visibleTopBooksArr.forEach((book) => {
+        // Sort the books by rating in descending order
+        booksArr.sort((a, b) => b.rate - a.rate);
+
+        // Get the top 3 rated books
+        var topRatedBooks = booksArr.slice(0, 3);
+
+        topRatedBooks.forEach((book) => {
           var topBooks_card = document.createElement("div");
           topBooks_card.classList.add("topBooks_card");
+          const urlParams = new URLSearchParams(window.location.search);
+          urlParams.append("type", book["type"]);
           const urlSearchParams = new URLSearchParams();
           urlSearchParams.append("id", book["id"]);
-          console.log(book["id"]);
           const href =
             "http://127.0.0.1:5500/Book-Details/Book-Details.html?" +
-            urlSearchParams.toString();
-
+            urlSearchParams.toString() +
+            "&" +
+            urlParams;
           topBooks_card.innerHTML = `
-            
-             <a href="${href}"> <img src="${book.image}" alt="cover" width="350rem" height="350rem"></a>
-          
+          <a href="${href}" class="book__link">
+          <img src="${book.image}" alt="cover" width="350rem" height="350rem">
+          <div class="book__overlay">
+            <p>Read More</p>
+          </div>
+        </a>
             <p class="topBooks-card_text">${book.author}</p>
             <h1 class="topBooks-card_title">${book.title}</h1>
+            <p class="topBooks-card_rating" style="font-size:2rem;">Rating: ${book.rate}</p>
             <a href="#"><i class="fa-regular fa-heart" style="font-size:2.5rem;"></i></a>
             <a href="#"><i class="fa-solid fa-heart" style="font-size:2.5rem; display:none;"></i></a>`;
           topBooks.appendChild(topBooks_card);

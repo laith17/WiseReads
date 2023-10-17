@@ -1,81 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="css/CatalogPage.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <head>
+    <link rel="stylesheet" href="css/CatalogPage.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;700&display=swap"
       rel="stylesheet" />
-  
-</head>
-<body>
 
-   <!--* Start Header -->
-   <header class="header">
-    <div class="header__box">
-      <a href="index.html" class="logo-link">
-        <img
-          src="images/logo.png"
-          alt="An image of a logo"
-          class="logo-img" />
-      </a>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="list-item">
-            <a href="index.html">Home</a>
-          </li>
-          <li class="list-item">
-            <a href="#">Register</a>
-          </li>
-          <li class="list-item">
-            <a href="#">News</a>
-          </li>
-          <li class="list-item">
-            <a href="#">About Us</a>
-          </li>
-          <li class="list-item">
-            <a href="#">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__box2">
-      <a href="./Search-Page/search-page.html" class="search__link">
-        <div class="search__btn--header">
-          <i class="fa-solid fa-magnifying-glass"></i>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!--* Start Header -->
+    <header class="header">
+      <div class="header__box">
+        <a href="../index.html" class="logo-link">
+          <img
+            src="./images/LogoNew.png"
+            alt="An image of a logo"
+            class="logo-img" />
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="list-item">
+              <a href="../index.html">Home</a>
+            </li>
+            <li class="list-item">
+              <a href="./Catalog-Page.html">Book Catalog</a>
+            </li>
+
+            <li class="list-item">
+              <a href="../About-Us/About-Us.html">About Us</a>
+            </li>
+            <li class="list-item">
+              <a href="../user-profile/contactus.html">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__box2">
+        <a href="../Search-Page/search-page.html" class="search__link">
+          <div class="search__btn--header">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </a>
+        <div class="register-btns">
+          <a href="../log/register.html"> <button id="login">Login</button></a>
+          <a href="../log/register.html">
+            <button id="signUp">Sign Up</button></a
+          >
         </div>
-      </a>
-      <div>
-        <button id="login">Login</button>
-        <button id="signUp">Sign Up</button>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </div>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+    </header>
+    <!--* End Header -->
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Catalog Page</h1>
       </div>
-    </div>
-  </header>
-  <!--* End Header -->
-
-<section class="hero">
-  <div class="hero-content">
-    <h1>Catalog Page</h1>
-
-  </div>
-</section>
-
+    </section>
 
     <!-- catalog btn-->
-  <div class="container">
+    <!-- <div class="container">
     <div id="type-buttons">
         <button id="btn-all">All</button>
         <button id="btn_fiction">Fiction</button>
@@ -88,98 +87,109 @@
     </div>
     <div id="pagination">
 
-    </div>
-<!--End catalog btn-->
+    </div> -->
+    <!--End catalog btn-->
 
-<!-- Books section  -->
-<section id="Books-section">
-  <div class="container">
-  <div class="Books m-1" id="Books">
-
-  </div>
-  </div>
-  </div>
-</section>
-<!--End Books section  -->
-<!-- pagination btn -->
-<div id="pagination" >
-  <button id="prev-button">Previous</button>
-  <button id="next-button">Next</button>
-</div>
-
-<!--* Start Footer Section -->
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer__links">
-      <div class="nav-footer">
-        <h3 class="nav-footer__heading">Pages</h3>
-        <ul class="nav-footer__links">
-          <li class="link-item">
-            <a href="./index.html">Home</a>
-          </li>
-          <li class="link-item">
-            <a href="#">Books Catalog</a>
-          </li>
-          <li class="link-item">
-            <a href="./Search-Page/search-page.html">Books Search</a>
-          </li>
-          <li class="link-item">
-            <a href="./About-Us/About-Us.html">About Us</a>
-          </li>
-          <li class="link-item">
-            <a href="./user-profile/contactus.html">Contact Us</a>
-          </li>
-        </ul>
+    <div class="container">
+      <div id="dropdown-container">
+        <label for="book-categories">Select a category:</label>
+        <select id="book-categories">
+          <option id="btn-all">All</option>
+          <option id="btn_fiction">Fiction</option>
+          <option id="btn-nonfiction">Non-Fiction</option>
+          <option id="btn-classic">Classic</option>
+          <option id="btn-scifi">Science Fiction</option>
+          <option id="btn-Fantasy">Fantasy</option>
+        </select>
       </div>
+      <div id="book-container" class="Books"></div>
+    </div>
 
-      <div class="footer-quickLinks">
-        <div class="footer-quickLinks__box">
-          <h3 class="footer-quickLinks__heading">Quick Links</h3>
-          <ul class="footer-quickLinks__links">
-            <li class="link-item">
-              <a href="FAQ/FAQ.html">FAQ</a>
-            </li>
-            <li class="link-item">
-              <a href="./privacy page/privacy.html">Privacy Policy</a>
-            </li>
-          
-          </ul>
+    <!-- Books section  -->
+    <section id="Books-section">
+      <div class="container">
+        <div class="Books m-1" id="Books"></div>
+      </div>
+    </section>
+    <!--End Books section  -->
+    <!-- pagination btn -->
+    <div id="pagination">
+      <button id="prev-button">Previous</button>
+      <button id="next-button">Next</button>
+    </div>
+
+    <!--* Start Footer Section -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__links">
+          <div class="nav-footer">
+            <h3 class="nav-footer__heading">Pages</h3>
+            <ul class="nav-footer__links">
+              <li class="link-item">
+                <a href="../index.html">Home</a>
+              </li>
+              <li class="link-item">
+                <a href="#">Books Catalog</a>
+              </li>
+              <li class="link-item">
+                <a href="../Search-Page/search-page.html">Books Search</a>
+              </li>
+              <li class="link-item">
+                <a href="../About-Us/About-Us.html">About Us</a>
+              </li>
+              <li class="link-item">
+                <a href="../user-profile/contactus.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-quickLinks">
+            <div class="footer-quickLinks__box">
+              <h3 class="footer-quickLinks__heading">Quick Links</h3>
+              <ul class="footer-quickLinks__links">
+                <li class="link-item">
+                  <a href="../FAQ/FAQ.html">FAQ</a>
+                </li>
+                <li class="link-item">
+                  <a href="../privacy page/privacy.html">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-socialmedia">
+            <h3 class="footer-socialmedia__heading">Follow Us</h3>
+            <p class="footer-socialmedia__text">
+              Stay in touch with by following us on social media.
+            </p>
+            <ul class="footer-socialmedia__links">
+              <li class="link-item">
+                <a href="#" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="footer-socialmedia">
-        <h3 class="footer-socialmedia__heading">Follow Us</h3>
-        <p class="footer-socialmedia__text">
-          Stay in touch with by following us on social media.
-        </p>
-        <ul class="footer-socialmedia__links">
-          <li class="link-item">
-            <a href="#" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-          <li class="link-item">
-            <a href="#">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-          </li>
-          <li class="link-item">
-            <a href="#">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+      <p class="copyright">
+        WiseReads&copy;Copyright 2023. Made by Laith Al-Majali
+      </p>
+    </footer>
 
-  <p class="copyright">WiseReads&copy;Copyright 2023. Made by Laith Al-Majali</p>
-</footer>
-
-<!--* End Footer Section -->
-<script src="/Catalog-Page/javascript/Catalog-Page.js">
-
-</script>
-</body>
+    <!--* End Footer Section -->
+    <script src="/Catalog-Page/javascript/Catalog-Page.js"></script>
+  </body>
 </html>

@@ -9,20 +9,19 @@
 
 /* Start Global Styling  */
 
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-font-family: "Cormorant", serif;
+  font-family: "Cormorant", serif;
 }
-
 
 .header {
   display: flex;
@@ -137,24 +136,23 @@ font-family: "Cormorant", serif;
 
 .btn-primary,
 .btn-outline-primary {
-    color: var(--secondary-color);
-    background-color: white;
-    border-color:var(--secondary-color); 
-    transition: all 0.3s ease; 
+  color: var(--secondary-color);
+  background-color: white;
+  border-color: var(--secondary-color);
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover,
 .btn-outline-primary:hover {
-    color: white; 
-    background-color: var(--secondary-color); 
-    border-color: var(--secondary-color);
+  color: white;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 .form-control {
   color: black;
   background-color: white;
-  border-color: var(--secondary-color); 
+  border-color: var(--secondary-color);
 }
-
 
 .profile-container {
   width: 30rem;
@@ -164,8 +162,8 @@ font-family: "Cormorant", serif;
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
   text-align: left;
   margin-top: 2rem;
- margin-left: 2rem;
- margin-bottom: 8rem;
+  margin-left: 2rem;
+  margin-bottom: 8rem;
 }
 
 .profile-image {
@@ -178,18 +176,16 @@ font-family: "Cormorant", serif;
 .btn-outline-success:hover {
   color: white;
   background-color: var(--secondary-color);
-  
 }
 
-.upload-btn-wrapper button{
+.upload-btn-wrapper button {
   position: relative;
   color: var(--secondary-color);
   border-color: var(--secondary-color);
   font-size: 2rem;
 }
 
-
-.upload-btn-wrapper input[type=file] {
+.upload-btn-wrapper input[type="file"] {
   font-size: 2rem;
   height: 2.5rem;
   position: absolute;
@@ -209,21 +205,20 @@ font-family: "Cormorant", serif;
 }
 .action-buttons ul {
   list-style: none;
-
 }
 
-.action-buttons ul li{
+.action-buttons ul li {
   color: var(--secondary-color);
   margin-right: 1rem;
   padding: 1rem 1.25rem;
   font-size: 2rem;
   border: none;
   cursor: pointer;
-  border-radius: 0.40rem;
+  border-radius: 0.4rem;
   transition: 1s;
 }
 
-.action-buttons  i {
+.action-buttons i {
   font-size: 2rem;
   margin-right: 1rem;
 }
@@ -236,33 +231,29 @@ font-family: "Cormorant", serif;
   color: var(--white-color);
 }
 
-.log a{
+.log a {
   color: var(--secondary-color);
   margin-right: 1rem;
   padding: 1rem 1.25rem;
   font-size: 2rem;
   border: none;
   cursor: pointer;
-  border-radius: 0.40rem;
+  border-radius: 0.4rem;
 }
-.profile-container
-.change-password-btn,
+.profile-container .change-password-btn,
 .favorites-btn {
   color: white;
 }
 .p_container {
   display: flex;
-  
 }
 .content {
   padding: 2rem;
   margin: 3rem;
- flex: 2rem;
- display: flex;
- align-items: center;
- justify-content: center;
-
- 
+  flex: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .content .change {
   display: flex;
@@ -296,7 +287,6 @@ body {
 
 .right_conatct_social_icon {
   height: 100%;
-  
 }
 
 .contact_field h3 {
@@ -314,7 +304,6 @@ body {
   letter-spacing: 0.0625rem;
   margin-bottom: 2.1875rem;
 }
-
 
 .contact_field .form-control {
   border-radius: 0;
@@ -366,11 +355,11 @@ body {
 
 button.contact_form_submit {
   background-color: var(--secondary-color);
- 
-  color:var(--white-color);
+
+  color: var(--white-color);
   padding: 1rem 2rem;
   width: 12rem;
-  margin-top:2rem;
+  margin-top: 2rem;
   cursor: pointer;
   font-size: 1.5rem;
   letter-spacing: 0.125rem;
@@ -395,37 +384,37 @@ button.contact_form_submit {
   align-items: center;
   justify-content: center;
   padding: 3rem;
-  width: 70rem; 
+  width: 70rem;
 }
 .form_container {
-  font-size: 2rem; 
-  padding: 4rem; 
+  font-size: 2rem;
+  padding: 4rem;
 }
 
 .account-details-form {
-  width: 100%; 
+  width: 100%;
 }
 
 .account-details-form h2 {
-  font-size: 2rem; 
-  margin-bottom: 1rem; 
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .account-details-form label,
 .account-details-form input {
-  font-size: 2rem; 
-  margin-bottom: 1rem; 
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .account-details-form input {
-  height: 2.5rem; 
-  width: 100%; 
-  padding: 0.5rem; 
+  height: 2.5rem;
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .account-details-form button {
-  font-size: 1.5rem; 
-  padding: 1rem 2rem; 
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
   color: var(--white-color);
   background-color: var(--secondary-color);
 }
@@ -440,20 +429,17 @@ button.contact_form_submit {
 @media (max-width: 768px) {
   .p_container {
     flex-direction: column;
-    
-    
   }
 }
-.content  > div,
+.content > div,
 .content .change {
   display: none;
 }
 .content div.active {
   display: flex;
-  
 }
 .action-buttons ul li.active {
-  border:0.1rem solid var(--secondary-color) ;
+  border: 0.1rem solid var(--secondary-color);
 }
 /** Start Footer Section */
 
@@ -535,8 +521,7 @@ button.contact_form_submit {
 }
 
 /** End Footer Section */
-.mail
-{
+.mail {
   text-decoration: none;
   font-size: 1rem;
   color: var(--secondary-color);
@@ -546,22 +531,82 @@ button.contact_form_submit {
   font-size: 1rem;
   color: var(--secondary-color);
 }
-.change{
+.change {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 3rem;
-  width: 70rem; 
-  
+  width: 70rem;
 }
 
-input::placeholder{
-font-size: 1.5rem !important;
+input::placeholder {
+  font-size: 1.5rem !important;
 }
-textarea::placeholder{
+textarea::placeholder {
   font-size: 1.5rem !important;
-  }
-  .contact-a{
+}
+.contact-a {
   font-size: 1.5rem !important;
+}
+
+/** Start Media Query */
+
+@media screen and (max-width: 1170px) {
+  .container {
+    width: 98rem;
   }
+}
+
+@media screen and (max-width: 980px) {
+  .container {
+    width: 90rem;
+  }
+  .books__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:first-child {
+    transform: translateY(0.8rem) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:last-child {
+    transform: translateY(-0.8rem) rotate(-45deg);
+  }
+  .main-nav__list,
+  .register-btns {
+    position: fixed;
+    left: -100%;
+    top: 9rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    background-color: var(--secondary-color);
+  }
+  .main-nav__list,
+  #signUp,
+  #login {
+    margin: 2.5rem 0;
+  }
+  .main-nav__list.active {
+    padding: 3rem;
+    margin: 9rem 0;
+    left: 0;
+  }
+  .register-btns.active {
+    left: 0;
+  }
+  .register-btns {
+    color: #000;
+    display: inline-block;
+  }
+}
+
+/** End Media Query */

@@ -49,6 +49,7 @@
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 1.5rem 3rem;
+  width: 90rem;
 }
 
 .img-slider__info h2 {
@@ -215,7 +216,7 @@
 
 /** Start Features  */
 .features {
-  height: 36rem;
+  height: 40rem;
   width: 90%;
   margin: 13rem auto 0;
   background-image: linear-gradient(
@@ -239,7 +240,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .features h4 {
@@ -256,213 +257,202 @@
 
 /** End Books Section */
 
-
 /* ******************************* */
 
+/* New style  */
 
-  /* New style  */
-  
-  /* new books section style  */
+/* new books section style  */
+.newBooks-heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 5rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 760px) {
   .newBooks-heading {
-    text-align: center;
+    text-align: left;
     font-weight: bold;
-    font-size: 5rem;
+    font-size: 3rem;
     letter-spacing: 0.3rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
+    margin-left: 13rem;
   }
-  
-  @media screen and (max-width:760px) {
-    .newBooks-heading {
-      text-align: left;
-      font-weight: bold;
-      font-size: 3rem;
-      letter-spacing: 0.3rem;
-      margin-bottom: 4rem;
-      margin-left: 13rem;
-    }
-  }
-  .newBooks-section{
-    margin-right: 5rem;
-  }
+}
+.newBooks-section {
+  margin-right: 5rem;
+}
+.newBooks {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5rem;
+}
+
+/* newBooks card for small screen */
+@media (max-width: 560px) {
   .newBooks {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 5rem;
+    grid-template-columns: repeat(1, 1fr);
   }
-  
-  /* newBooks card for small screen */
-  @media (max-width:560px) {
-    .newBooks {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .newBooks_card {
-      margin-inline: 12rem;
-    }
-  
-  }
-  
-  /* newBooks card for medium screen */
-  @media (min-width: 561px) and (max-width:900px) {
-    .newBooks {
-      display: grid;
-      grid-template-columns: auto auto auto;
-    }
-  }
-  
-  /* remove arrows for  screen  with width 1380 */
-  
-  @media (max-width: 1380px) {
-    .newBooks-arrow {
-      display: none;
-    }
-  }
-  
-  /* style the author and title  */
-  .newBooks-card_text {
-    font-size: medium;
-    margin-top: 2rem;
-  }
-  
-  .newBooks-card_title {
-    font-size: large;
-    margin-bottom: 2rem;
-  }
-  
-  .newBooks-scroll{
-    scroll-behavior: smooth;
-  }
-  .book__link {
-    position: relative;
-    text-decoration: none;
-    overflow: hidden;
-  }
-  
-  .book__link img {
-    width: 100%;
-    height: 30rem;
-    object-fit: cover;
-  }
-  
-  .book__link {
-    position: relative;
-    text-decoration: none;
-    overflow: hidden;
-  }
-  
-  .book__link img {
-    width: 100%;
-    height: 30rem;
-    object-fit: cover;
-  }
- 
-  /* End new books section style  */
-  
 
-  
-  /** Start new Features  */
-  .new-features {
-    height: 36rem;
-    width: 90%;
-    margin: 13rem auto 13rem;
-    background-image: linear-gradient(
-        rgba(89, 146, 111, 0.9),
-        rgba(89, 146, 111, 0.9)
-      ),
-      url("/Home-Page/images/manyBook.jpg");
-    background-size: cover;
-    background-position: center;
-    color: var(--white-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .newBooks_card {
+    margin-inline: 12rem;
   }
-  
-  .new-features__content {
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 1rem;
+}
+
+/* newBooks card for medium screen */
+@media (min-width: 561px) and (max-width: 900px) {
+  .newBooks {
+    display: grid;
+    grid-template-columns: auto auto auto;
   }
-  
-  .new-features h4 {
-    font-size: 2.4rem;
-    letter-spacing: 0.2rem;
+}
+
+/* remove arrows for  screen  with width 1380 */
+
+@media (max-width: 1380px) {
+  .newBooks-arrow {
+    display: none;
   }
-  
-  .new-features p {
-    font-size: 3.5rem;
-    letter-spacing: 0.2rem;
-  }
-  
-  @media (max-width:760px) {
-    
+}
+
+/* style the author and title  */
+.newBooks-card_text {
+  font-size: medium;
+  margin-top: 2rem;
+}
+
+.newBooks-card_title {
+  font-size: large;
+  margin-bottom: 2rem;
+}
+
+.newBooks-scroll {
+  scroll-behavior: smooth;
+}
+.book__link {
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.book__link img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+}
+
+.book__link {
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.book__link img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+}
+
+/* End new books section style  */
+
+/** Start new Features  */
+.new-features {
+  height: 40rem;
+  width: 90%;
+  margin: 13rem auto 13rem;
+  background-image: linear-gradient(
+      rgba(89, 146, 111, 0.9),
+      rgba(89, 146, 111, 0.9)
+    ),
+    url("/Home-Page/images/manyBook.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-features__content {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
+}
+
+.new-features h4 {
+  font-size: 2.4rem;
+  letter-spacing: 0.2rem;
+}
+
+.new-features p {
+  font-size: 3.5rem;
+  letter-spacing: 0.2rem;
+}
+
+@media (max-width: 760px) {
   .new-features h4 {
     font-size: 1.4rem;
     letter-spacing: 0.2rem;
   }
-  
+
   .new-features p {
     font-size: 2rem;
     letter-spacing: 0.2rem;
   }
-  
-  }
-  /** End new Features  */
-  
+}
+/** End new Features  */
 
-  /* top books section style  */
+/* top books section style  */
+.topBooks-heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 5rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 760px) {
   .topBooks-heading {
-    text-align: center;
+    text-align: left;
     font-weight: bold;
-    font-size: 5rem;
+    font-size: 3rem;
     letter-spacing: 0.3rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
+    margin-left: 13rem;
   }
-  
-  @media screen and (max-width:760px) {
-    .topBooks-heading {
-      text-align: left;
-      font-weight: bold;
-      font-size: 3rem;
-      letter-spacing: 0.3rem;
-      margin-bottom: 4rem;
-      margin-left: 13rem;
-    }
-  }
-  
-  #topBooks{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
-  }
- 
+}
 
-  /* newBooks card for small screen */
-  @media (max-width:760px) {
-    #topBooks {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      justify-content: center;
-    }
-  
-    .topBooks_card {
-     margin-inline: 5rem; 
-     
-    }
-  
+#topBooks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+}
+
+/* newBooks card for small screen */
+@media (max-width: 760px) {
+  #topBooks {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
   }
-  
-  /* Responsive design for medium screens */
+
+  .topBooks_card {
+    margin-inline: 5rem;
+  }
+}
+
+/* Responsive design for medium screens */
 @media (min-width: 561px) and (max-width: 900px) {
   #topBooks {
     display: grid;
-    grid-template-columns: auto ;
+    grid-template-columns: auto;
     gap: 20px;
   }
 }

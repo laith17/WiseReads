@@ -19,11 +19,12 @@
     <title>Book Details</title>
   </head>
   <body>
+    <!--* Start Header -->
     <header class="header">
       <div class="header__box">
-        <a href="../index.html" class="logo-link">
+        <a href="../user-profile/UserProfile.html" class="logo-link">
           <img
-            src="./images/logo.png"
+            src="../Home-Page/images/LogoNew.png"
             alt="An image of a logo"
             class="logo-img" />
         </a>
@@ -33,16 +34,13 @@
               <a href="../index.html">Home</a>
             </li>
             <li class="list-item">
-              <a href="#">Register</a>
+              <a href="../Catalog-Page/Catalog-Page.html">Book Catalog</a>
             </li>
             <li class="list-item">
-              <a href="#">News</a>
+              <a href="../About-Us/About-Us.html">About Us</a>
             </li>
             <li class="list-item">
-              <a href="#">About Us</a>
-            </li>
-            <li class="list-item">
-              <a href="#">Contact Us</a>
+              <a href="../user-profile/contactus.html">Contact Us</a>
             </li>
           </ul>
         </nav>
@@ -53,9 +51,11 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </a>
-        <div>
-          <button id="login">Login</button>
-          <button id="signUp">Sign Up</button>
+        <div class="register-btns">
+          <a href="../log/register.html"> <button id="login">Login</button></a>
+          <a href="../log/register.html">
+            <button id="signUp">Sign Up</button></a
+          >
         </div>
         <div class="hamburger">
           <span class="bar"></span>
@@ -131,80 +131,12 @@
         </div>
       </section>
 
-      <!-- <template data-book-template>
-        <div class="book-details">
-          <div class="book-details__img">
-            <img src="./images/book4.jfif" alt="" />
-          </div>
-          <div class="book-details__text">
-            <h1 class="book-details__title">
-              Harry Potter : Half Blood Prince
-            </h1>
-            <p class="book-details__author">JK Rowling</p>
-            <p class="book-details__paragraph">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Incidunt animi consectetur minima soluta quod.
-            </p>
-            <div class="book-details__links">
-              <button class="btn-Download">
-                Download
-                <i class="fa-solid fa-circle-arrow-down"></i>
-              </button>
-
-              <button class="btn-Favorite">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="book-description">
-          <div class="book-description__descreption">
-            <div>
-              <h3 class="book-description__heading">Description</h3>
-              <p class="book-description__paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                labore voluptas sequi est, distinctio dolorum rerum accusamus?
-                Dolore accusamus magnam quo quisquam, iste accusantium quaerat
-                sit laboriosam aut voluptatum tempore?
-              </p>
-            </div>
-            <div class="author">
-              <div class="author__box">
-                <img
-                  src="./images/author profile.png"
-                  alt=""
-                  class="author__img" />
-                <p class="author__name">JK Rowling</p>
-              </div>
-              <p class="author__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Cupiditate nisi ducimus illum fuga.
-              </p>
-            </div>
-          </div>
-          <div class="book-description__links">
-            <div class="book-description__box">
-              <h3 class="book-description__heading">Language</h3>
-              <p class="book-description__paragraph">English (USA & UK)</p>
-            </div>
-            <div class="book-description__box">
-              <h3 class="book-description__heading">Book Genre</h3>
-              <p class="book-description__paragraph">Fantasy</p>
-            </div>
-            <div class="book-description__box">
-              <h3 class="book-description__heading">Publication Date</h3>
-              <p class="book-description__paragraph">October 15, 2021</p>
-            </div>
-          </div>
-        </div>
-      </template> -->
-
       <!--* Start Related Books Section -->
 
       <section class="books-section">
         <div class="container">
           <div class="books">
-            <h1 class="books__heading">Might Intrest You</h1>
+            <h1 class="books__heading">Related Books</h1>
             <div class="books__grid">
               <template data-book-template>
                 <div class="book__card">
@@ -226,80 +158,79 @@
         </div>
       </section>
       <!--* End Related Books Section -->
-
     </main>
 
-   <!--* Start Footer Section -->
+    <!--* Start Footer Section -->
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__links">
-      <div class="nav-footer">
-        <h3 class="nav-footer__heading">Pages</h3>
-        <ul class="nav-footer__links">
-          <li class="link-item">
-            <a href="./index.html">Home</a>
-          </li>
-          <li class="link-item">
-            <a href="#">Books Catalog</a>
-          </li>
-          <li class="link-item">
-            <a href="./Search-Page/search-page.html">Books Search</a>
-          </li>
-          <li class="link-item">
-            <a href="./About-Us/About-Us.html">About Us</a>
-          </li>
-          <li class="link-item">
-            <a href="./user-profile/contactus.html">Contact Us</a>
-          </li>
-        </ul>
-      </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__links">
+          <div class="nav-footer">
+            <h3 class="nav-footer__heading">Pages</h3>
+            <ul class="nav-footer__links">
+              <li class="link-item">
+                <a href="../index.html">Home</a>
+              </li>
+              <li class="link-item">
+                <a href="../Catalog-Page/Catalog-Page.html">Books Catalog</a>
+              </li>
+              <li class="link-item">
+                <a href="../Search-Page/search-page.html">Books Search</a>
+              </li>
+              <li class="link-item">
+                <a href="../About-Us/About-Us.html">About Us</a>
+              </li>
+              <li class="link-item">
+                <a href="../user-profile/contactus.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
 
-      <div class="footer-quickLinks">
-        <div class="footer-quickLinks__box">
-          <h3 class="footer-quickLinks__heading">Quick Links</h3>
-          <ul class="footer-quickLinks__links">
-            <li class="link-item">
-              <a href="FAQ/FAQ.html">FAQ</a>
-            </li>
-            <li class="link-item">
-              <a href="./privacy page/privacy.html">Privacy Policy</a>
-            </li>
-          
-          </ul>
+          <div class="footer-quickLinks">
+            <div class="footer-quickLinks__box">
+              <h3 class="footer-quickLinks__heading">Quick Links</h3>
+              <ul class="footer-quickLinks__links">
+                <li class="link-item">
+                  <a href="../FAQ/FAQ.html">FAQ</a>
+                </li>
+                <li class="link-item">
+                  <a href="../privacy page/privacy.html">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-socialmedia">
+            <h3 class="footer-socialmedia__heading">Follow Us</h3>
+            <p class="footer-socialmedia__text">
+              Stay in touch with by following us on social media.
+            </p>
+            <ul class="footer-socialmedia__links">
+              <li class="link-item">
+                <a href="#" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="footer-socialmedia">
-        <h3 class="footer-socialmedia__heading">Follow Us</h3>
-        <p class="footer-socialmedia__text">
-          Stay in touch with by following us on social media.
-        </p>
-        <ul class="footer-socialmedia__links">
-          <li class="link-item">
-            <a href="#" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-          <li class="link-item">
-            <a href="#">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-          </li>
-          <li class="link-item">
-            <a href="#">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+      <p class="copyright">
+        WiseReads&copy;Copyright 2023. Made by Laith Al-Majali
+      </p>
+    </footer>
 
-  <p class="copyright">WiseReads&copy;Copyright 2023. Made by Laith Al-Majali</p>
-</footer>
-
-<!--* End Footer Section -->
     <!--* End Footer Section -->
 
     <script src="./javascript/Book-Details.js"></script>

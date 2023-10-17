@@ -5,6 +5,7 @@
     align-items: center;
     /* background-color: #f1f1f1; */
 }
+
 .AboutUs{
     background: url(../images/book2.jpg);
     background-repeat: no-repeat;
@@ -22,7 +23,6 @@
     border: 1px solid #8bb39a;
 
 }
-
 
 .inner-container h1{
     color: black;

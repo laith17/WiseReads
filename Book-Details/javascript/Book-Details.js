@@ -1,16 +1,22 @@
-//* Adding Buttons
-// function addComment() {
-//   var comment = document.getElementById("comment").value;
+//* Hamburger Menu
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".main-nav__list");
+const register_btns = document.querySelector(".register-btns");
 
-//   if (comment) {
-//     var commentsList = document.getElementById("comments-list");
-//     var li = document.createElement("li");
-//     li.innerHTML = ":</strong> " + comment;
-//     commentsList.appendChild(li);
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+  register_btns.classList.toggle("active");
+});
 
-//     document.getElementById("comment").value = "";
-//   }
-// }
+//* Add event listeners to list items
+document.querySelectorAll(".list-item").forEach((element) => {
+  element.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    register_btns.remove("active");
+  });
+});
 
 function changeUrl() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -26,23 +32,34 @@ function changeUrl() {
 changeUrl();
 
 //* Fetch data to the related books section
+const urlParams = new URLSearchParams(window.location.search);
+const bookType = urlParams.get("type");
+const chosenBookId = parseInt(urlParams.get("id")); //* Get the chosen book's ID
+
 const bookCardTemplate = document.querySelector("[data-book-template]");
 const bookCardContainer = document.querySelector(".books__grid");
 
-fetch("http://localhost:3000/books?_limit=5")
+fetch(`http://localhost:3000/books?_limit=5&type=${bookType}`)
   .then((res) => res.json())
   .then((data) => {
-    data.forEach((book) => {
+    //* Filter the data array to exclude the chosen book
+    const relatedBooks = data.filter((book) => book.id !== chosenBookId);
+
+    relatedBooks.forEach((book) => {
       const card = bookCardTemplate.content.cloneNode(true).children[0];
       const bookAuthor = card.querySelector(".book__author");
       const bookTitle = card.querySelector(".book__title");
       const bookImage = card.querySelector(".book__img");
+      const urlParams = new URLSearchParams(window.location.search);
+      urlParams.append("type", book["type"]);
       const bookLink = card.querySelector(".book__link");
       const urlSearchParams = new URLSearchParams();
       urlSearchParams.append("id", book["id"]);
       const href =
         "http://127.0.0.1:5500/Book-Details/Book-Details.html?" +
-        urlSearchParams.toString();
+        urlSearchParams.toString() +
+        "&" +
+        urlParams;
       bookLink.href = href;
       bookImage.src = book.image;
       bookAuthor.textContent = book.author;
@@ -122,5 +139,3 @@ async function bookDescription(id) {
 }
 
 ////////////////////////////////////*
-
-

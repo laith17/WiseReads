@@ -224,3 +224,144 @@ body {
 }
 
 /** End Footer Section */
+
+/** Start Media Query */
+
+@media screen and (max-width: 1170px) {
+  .container {
+    width: 98rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .container {
+    width: 90rem;
+  }
+  .books__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:first-child {
+    transform: translateY(0.8rem) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:last-child {
+    transform: translateY(-0.8rem) rotate(-45deg);
+  }
+  .main-nav__list,
+  .register-btns {
+    position: fixed;
+    left: -100%;
+    top: 9rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    background-color: var(--secondary-color);
+  }
+  .main-nav__list,
+  #signUp,
+  #login {
+    margin: 2.5rem 0;
+  }
+  .main-nav__list.active {
+    padding: 3rem;
+    margin: 9rem 0;
+    left: 0;
+  }
+  .register-btns.active {
+    left: 0;
+  }
+  .register-btns {
+    color: #000;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 58%;
+  }
+  .container {
+    width: 75rem;
+  }
+  .books__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .book-details__text {
+    gap: 2.5rem;
+  }
+  .book-details__links {
+    justify-content: center;
+  }
+  .book-description {
+    padding: 10rem 8rem 8rem;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  html {
+    font-size: 55%;
+  }
+  .container {
+    width: 70rem;
+  }
+  .book-details {
+    left: 2rem;
+  }
+  .book-details__img img {
+    width: 85%;
+    height: 90%;
+  }
+  .book-description {
+    padding: 10rem 4rem 8rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  html {
+    font-size: 45%;
+  }
+  .book-details {
+    left: 2rem;
+  }
+  .book-details__img img {
+    width: 85%;
+    height: 90%;
+    margin-right: -10rem;
+  }
+  .book-details__text {
+    margin-top: 2rem;
+    gap: 3.5rem;
+  }
+  .book-description {
+    padding: 10rem 4rem 8rem;
+  }
+}
+
+@media screen and (max-width: 518px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  html {
+    font-size: 32%;
+  }
+  .book-details__img img {
+    width: 90%;
+    margin-right: -30rem;
+  }
+  .books__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/** End Media Query */

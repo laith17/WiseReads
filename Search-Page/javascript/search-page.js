@@ -1,3 +1,23 @@
+//* Hamburger Menu
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".main-nav__list");
+const register_btns = document.querySelector(".register-btns");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+  register_btns.classList.toggle("active");
+});
+
+//* Add event listeners to list items
+document.querySelectorAll(".list-item").forEach((element) => {
+  element.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    register_btns.remove("active");
+  });
+});
+
 //* Fetch data to the Search section
 const bookSearchTemplate = document.querySelector("[data-search-template]");
 const bookSearchContainer = document.querySelector(".serach-container");
@@ -26,13 +46,16 @@ function filterBooks() {
           const bookTitle = card.querySelector(".book__title");
           const bookDescription = card.querySelector(".book__description");
           const bookImage = card.querySelector(".book__img");
+          const urlParams = new URLSearchParams(window.location.search);
+          urlParams.append("type", book["type"]);
           const bookLink = card.querySelector(".book__link");
           const urlSearchParams = new URLSearchParams();
           urlSearchParams.append("id", book["id"]);
-          console.log(book["id"]);
           const href =
             "http://127.0.0.1:5500/Book-Details/Book-Details.html?" +
-            urlSearchParams.toString();
+            urlSearchParams.toString() +
+            "&" +
+            urlParams;
           bookLink.href = href;
           bookImage.src = book.image;
           bookAuthor.textContent = book.author;
