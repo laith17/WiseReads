@@ -15,7 +15,7 @@
 
 -[Trello Link](https://trello.com/b/vhgDwSdd/wise-reads)
 
-#Skills Used 
+# Skills Used 
 - HTML
 - CSS
 - Javascript
