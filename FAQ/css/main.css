@@ -147,7 +147,7 @@ body {
 /** Start Footer Section */
 
 .footer {
-  margin-top: 14rem;
+  margin-top: 10rem;
   height: 40rem;
   background-color: #000;
   display: flex;
@@ -227,19 +227,13 @@ body {
 
 /** Start Media Query */
 
-@media screen and (max-width: 1170px) {
+@media (max-width: 1170px) {
   .container {
     width: 98rem;
   }
 }
 
-@media screen and (max-width: 980px) {
-  .container {
-    width: 90rem;
-  }
-  .books__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+@media screen and (max-width: 970px) {
   .hamburger {
     display: block;
   }

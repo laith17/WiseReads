@@ -10,6 +10,7 @@
       "main_description":"weave tales that ignite our imagination, broaden our perspectives, and stir our deepest emotions. With every page turned, they offer a magical escape, inviting readers to explore diverse cultures, empathize with complex characters, and ponder profound ideas. In the embrace of a book, readers embark on unforgettable journeys, fostering a lifelong love for the art of storytelling.",
       "author_description":"This accomplished author weaves stories with a masterful touch, captivating readers with their words.",
       "language": "English",
+      "rate": "4.23",
       "publication_date": "2003-10-07",
      "download":"https://books.googleusercontent.com/books/content?req=AKW5QaeJxuyx22zEC2zHE-77hrBpBrKAdNVPC4uCMCgWr0GiB4ByQcJXVw0aZTSB84YPXuWZTVgcwIXA5xi6QgdbhatbKtiYtNmjgRXBBmUpe-AqzoH_5Yn2_kumogurDKcS6aWNIW8BVUnEFSO7huQMoJ06pb4_h0nDsO_MLoDiOVgAwnUfJmbOCY85mFZZ64NiENn9K78FFJIMYL2CTgIcf0h_LqamghaliMjDXM76q-lCIaQkG_yozBhgrClpkAGFvtYSRdlS"
     },
@@ -23,6 +24,7 @@
       "main_description":"weave tales that ignite our imagination, broaden our perspectives, and stir our deepest emotions. With every page turned, they offer a magical escape, inviting readers to explore diverse cultures, empathize with complex characters, and ponder profound ideas. In the embrace of a book, readers embark on unforgettable journeys, fostering a lifelong love for the art of storytelling.",
       "author_description":"This accomplished author weaves stories with a masterful touch, captivating readers with their words.",
       "language": "English",
+      "rate": "4.28",
       "publication_date": "2003-10-07",
        "download":"https://giove.isti.cnr.it/demo/eread/libri/angry/mockingbird.pdf"
     },
@@ -36,6 +38,7 @@
       "main_description":"weave tales that ignite our imagination, broaden our perspectives, and stir our deepest emotions. With every page turned, they offer a magical escape, inviting readers to explore diverse cultures, empathize with complex characters, and ponder profound ideas. In the embrace of a book, readers embark on unforgettable journeys, fostering a lifelong love for the art of storytelling.",
       "author_description":"This accomplished author weaves stories with a masterful touch, captivating readers with their words.",
       "language": "English",
+      "rate": "4.19",
       "publication_date": "2003-10-07",
        "download":"https://ia803200.us.archive.org/3/items/Orwell1984preywo/orwell1984preywo.pdf"
     },
@@ -624,6 +627,30 @@
  "main_description":"weave tales that ignite our imagination, broaden our perspectives, and stir our deepest emotions. With every page turned, they offer a magical escape, inviting readers to explore diverse cultures, empathize with complex characters, and ponder profound ideas. In the embrace of a book, readers embark on unforgettable journeys, fostering a lifelong love for the art of storytelling."
   ,"publication_date": "2003-10-07",
   "download":"https://www.thehaikufoundation.org/omeka/files/original/a1c847c9e092ec55de09dae3d74c39c0.pdf"
-}
-]
+}],
+"users": [
+  {
+    "firstname": "Osama",
+    "lastname": "Taani",
+    "address": "Address: zarqa strett",
+    "email": "osamataani07@gmail.com",
+    "id": 1
+  },
+  {
+    "fName": "Osama",
+    "lName": "Taani",
+    "userId": "vJ9KEZ77B2O6qGDS80DZo5bKP973",
+    "email": "osamataani@gmail.com",
+    "password": "Mqqqqq2@",
+    "address": "zarqa strett",
+    "id": 2
+  },
+  {
+    "userId": "ZSJ8UuHo36h5XBAU1U7fmplAVA63",
+    "email": "osamataani07@gmail.com",
+    "password": "Mqqqqq2@",
+    "address": "zarqa strett",
+    "id": 3
+  }
+ ]
 }

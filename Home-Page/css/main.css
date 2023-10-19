@@ -233,13 +233,7 @@ body {
   }
 }
 
-@media screen and (max-width: 980px) {
-  .container {
-    width: 90rem;
-  }
-  .books__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+@media screen and (max-width: 900px) {
   .hamburger {
     display: block;
   }
@@ -285,8 +279,3 @@ body {
 }
 
 /** End Media Query */
-
-
-
-
-

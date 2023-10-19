@@ -113,12 +113,6 @@ const autoplayNav = () => {
 };
 autoplayNav();
 
-// const searchInput = document.getElementById("search");
-
-// searchInput.addEventListener("keyup", (e) => {
-//   console.log(e);
-// });
-
 //* Fetch data to the Books section
 
 const bookCardTemplate = document.querySelector("[data-book-template]");
@@ -149,60 +143,10 @@ fetch("http://localhost:3000/books?_start=0&_limit=10")
       bookCardContainer.appendChild(card);
     });
   });
-// ******************
 
-// // Get the new books from the JSON server
-// fetch("http://localhost:3000/books")
-//   .then(res => res.json())
-//   .then(books => {
-//     if (books.length > 0) {
-//       var booksArr = books;
-//       var newBooks = document.getElementById("newBooks");
-//       // var visibleBooks = 5;
-//       var currentStart = 0;
-//       var currentEnd = 5;
+// **********************************************************************************
 
-//       function renderNewBooks() {
-//         newBooks.innerHTML = "";
-//         var visibleBooksArr = booksArr.slice(currentStart, currentEnd);
-
-//         visibleBooksArr.forEach((book) => {
-//           var newBooks_card = document.createElement('div');
-//           newBooks_card.classList.add('newBooks_card');
-//           newBooks_card.innerHTML = `
-
-//             <img class="" src="${book.image}" alt="cover" width="190rem" height="280rem">
-//             <p class="newBooks-card_text">${book.author}</p>
-//             <h1 class="newBooks-card_title">${book.title}</h1>
-
-//             <a href="#"><i class="fa-regular fa-heart" style="font-size:2.5rem; "></i></a>
-//             <a href="#"><i class="fa-solid fa-heart" style="font-size:2.5rem; display:none;"></i></a>`;
-//           newBooks.appendChild(newBooks_card);
-//         });
-//       }
-
-//       renderNewBooks();
-// // End Get the newBooks from the JSON server
-
-// // Handel the slider in NewBooks-cards section
-//       var arrowBtns = document.querySelectorAll('.newBooks-scroll i');
-//       arrowBtns.forEach(btn => {
-//         btn.addEventListener("click", () => {
-//           if (btn.id === "left" && currentStart > 0) {
-//             currentStart -= 1;
-//             currentEnd -= 1;
-//           } else if (btn.id === "right" && currentEnd < booksArr.length) {
-//             currentStart += 1;
-//             currentEnd += 1;
-//           }
-//           renderNewBooks();
-
-//         });
-//       });
-//     }
-//   });
-
-// Get the new books from the JSON server
+//* Get the new books from the JSON server
 fetch("http://localhost:3000/books")
   .then((res) => res.json())
   .then((books) => {
@@ -216,7 +160,7 @@ fetch("http://localhost:3000/books")
       function renderNewBooks() {
         newBooks.innerHTML = "";
 
-        // Calculate the maximum number of books to display (up to 20)
+        //* Calculate the maximum number of books to display (up to 20)
         var maxBooks = Math.min(currentEnd, maxDisplayedBooks);
 
         var visibleBooksArr = booksArr.slice(currentStart, maxBooks);
@@ -236,20 +180,20 @@ fetch("http://localhost:3000/books")
               urlParams;
             newBooks_card.innerHTML = `
                     <a href="${href}" class="book__link">
-                    <img src="${book.image}" alt="cover" width="280rem" height="280rem">
+                    <img src="${book.image}" alt="cover" class="book__img/>
                     <div class="book__overlay">
                       <p>Read More</p>
                     </div>
                   </a>                    
                       <p class="newBooks-card_text">${book.author}</p>
                         <h1 class="newBooks-card_title">${book.title}</h1> 
-                        <a href="#"><i class="fa-regular fa-heart" style="font-size:2.5rem; "></i></a>
-                        <a href="#"><i class="fa-solid fa-heart" style="font-size:2.5rem; display:none;"></i></a>`;
+                        <a href="./user-profile/favourite.html"><i class="fa-regular fa-heart" style="font-size:2.5rem; "></i></a>
+                        <a href="./user-profile/favourite.html"><i class="fa-solid fa-heart" style="font-size:2.5rem; display:none;"></i></a>`;
             newBooks.appendChild(newBooks_card);
           }
         });
 
-        // Disable the right button when reaching the end
+        //* Disable the right button when reaching the end
         if (currentEnd >= booksArr.length) {
           document.getElementById("right").style.display = "none";
         } else {
@@ -259,7 +203,7 @@ fetch("http://localhost:3000/books")
 
       renderNewBooks();
 
-      // Handle the slider in NewBooks-cards section
+      //* Handle the slider in NewBooks-cards section
       var arrowBtns = document.querySelectorAll(".newBooks-scroll i");
       arrowBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -275,8 +219,8 @@ fetch("http://localhost:3000/books")
       });
     }
   });
-// End Handel the slider in NewBooks-cards section
-// Fetch the books from the JSON server
+//* End Handel the slider in NewBooks-cards section
+//* Fetch the books from the JSON server
 fetch("http://localhost:3000/books")
   .then((res) => res.json())
   .then((books) => {
@@ -287,10 +231,10 @@ fetch("http://localhost:3000/books")
       function renderTopBooks() {
         topBooks.innerHTML = "";
 
-        // Sort the books by rating in descending order
+        //* Sort the books by rating in descending order
         booksArr.sort((a, b) => b.rate - a.rate);
 
-        // Get the top 3 rated books
+        //* Get the top 3 rated books
         var topRatedBooks = booksArr.slice(0, 3);
 
         topRatedBooks.forEach((book) => {
@@ -307,7 +251,7 @@ fetch("http://localhost:3000/books")
             urlParams;
           topBooks_card.innerHTML = `
           <a href="${href}" class="book__link">
-          <img src="${book.image}" alt="cover" width="350rem" height="350rem">
+          <img src="${book.image}" alt="cover" />
           <div class="book__overlay">
             <p>Read More</p>
           </div>
@@ -315,8 +259,8 @@ fetch("http://localhost:3000/books")
             <p class="topBooks-card_text">${book.author}</p>
             <h1 class="topBooks-card_title">${book.title}</h1>
             <p class="topBooks-card_rating" style="font-size:2rem;">Rating: ${book.rate}</p>
-            <a href="#"><i class="fa-regular fa-heart" style="font-size:2.5rem;"></i></a>
-            <a href="#"><i class="fa-solid fa-heart" style="font-size:2.5rem; display:none;"></i></a>`;
+            <a href="./user-profile/favourite.html"><i class="fa-regular fa-heart" style="font-size:2.5rem;"></i></a>
+            <a href="./user-profile/favourite.html"><i class="fa-solid fa-heart" style="font-size:2.5rem; display:none;"></i></a>`;
           topBooks.appendChild(topBooks_card);
         });
       }

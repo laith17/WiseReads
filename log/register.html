@@ -15,35 +15,51 @@
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <title>Log In / Register</title>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top p-2 m-1">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand " href="#"><img src="/images/books.png" alt="icon" height="30rem" width="25rem" ></a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Catalog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">About Us</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+    <!--* Start Header -->
+    <header class="header">
+      <div class="header__box">
+        <a href="../index.html" class="logo-link">
+          <img
+            src="./images/LogoNew.png"
+            alt="An image of a logo"
+            class="logo-img" />
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="list-item">
+              <a href="../index.html">Home</a>
+            </li>
+            <li class="list-item">
+              <a href="../Book-Details/Book-Details.html">Book Catalog</a>
+            </li>
+            <li class="list-item">
+              <a href="../About-Us/About-Us.html">About Us</a>
+            </li>
+            <li class="list-item">
+              <a href="../user-profile/contactus.html">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- <div class="header__box2">
+        <a href="./Search-Page/search-page.html" class="search__link">
+          <div class="search__btn--header">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div> -->
+        <!-- </a> -->
+        <!-- <div>
+          <button id="login">Login</button>
+          <button id="signUp">Sign Up</button>
+        </div> -->
+        <!-- <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-      </nav> 
-</head>
+      </div> -->
+    </header>
+    <!--* End Header -->
+
 <body>
     
 
@@ -61,24 +77,35 @@
 
             </div> -->
             
-            <form id="login" class="group" onsubmit="signin(event)">
-              <!-- Your existing form fields for login -->
-              <input type="email" class="input" id="emailSignIn" placeholder="Username or Email" required>
-              <input type="password" class="input" id="passwordSignIn" placeholder="Password" required>
-              <button type="submit" class="submit" id="logininp">Log in</button>
-          </form>
-          
-            <form id="register" class="group" onsubmit="signup(event)" >
+              <form id="login" class="group" onsubmit="signin(event)">
+                <input type="email" class="input" id="emailSignIn" placeholder="Username or Email" required>
+                <p id="emailSignInError" class="validation-error"></p>
+
+                <input type="password" class="input" id="passwordSignIn" placeholder="Password" required>
+                <p id="passwordSignInError" class="validation-error"></p>
+
+                <button type="submit" class="submit" id="logininp">Log in</button>
+            </form>
+
+            <!-- Sign Up form -->
+            <form id="register" class="group" onsubmit="signup(event)">
                 <input type="text" name="fName" id="fName" class="input" placeholder="First Name" required>
+                <p id="fNameError" class="validation-error"></p>
+
                 <input type="text" name="lName" id="lName" class="input" placeholder="Last Name" required>
+                <p id="lNameError" class="validation-error"></p>
+
                 <input type="email" name="email" id="email" class="input" placeholder="Email" required>
-                <input type="password" name="password" id="password" class="input" placeholder="Password" required >
-                <input type="text" name="address" id="address" class="input" placeholder="Address" required >
+                <p id="emailError" class="validation-error"></p>
+
+                <input type="password" name="password" id="password" class="input" placeholder="Password" required>
+                <p id="passwordError" class="validation-error"></p>
+
+                <input type="text" name="address" id="address" class="input" placeholder="Address" required>
+                <p id="addressError" class="validation-error"></p>
+
                 <p id="message"></p>
-                <!-- <div class="remember-group">
-                    <input type="checkbox" class="check-box">
-                    <span>I agree to the terms & conditions</span>
-                </div> -->
+
                 <button type="submit" class="submit" id="signupinp">Register</button>
             </form>
 
@@ -86,50 +113,89 @@
         </div>
 
     </div>
+    <div id="popup" class="popup">
+      <span class="popup-message" id="popupMessage"></span>
+  </div>
+  
 
 
-    <footer class="bg-dark text-white mt-auto">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                          <h5>Follow Us</h5>
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                            </ul>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            
-                        </div>
-                    </div>
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
+    <!--* Start Footer Section -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__links">
+          <div class="nav-footer">
+            <h3 class="nav-footer__heading">Pages</h3>
+            <ul class="nav-footer__links">
+              <li class="link-item">
+                <a href="../index.html">Home</a>
+              </li>
+              <li class="link-item">
+                <a href="../Catalog-Page/Catalog-Page.html">Books Catalog</a>
+              </li>
+              <li class="link-item">
+                <a href="../Search-Page/search-page.html">Books Search</a>
+              </li>
+              <li class="link-item">
+                <a href="../About-Us/About-Us.html">About Us</a>
+              </li>
+              <li class="link-item">
+                <a href="../user-profile/contactus.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-quickLinks">
+            <div class="footer-quickLinks__box">
+              <h3 class="footer-quickLinks__heading">Quick Links</h3>
+              <ul class="footer-quickLinks__links">
+                <li class="link-item">
+                  <a href="../FAQ/FAQ.html">FAQ</a>
+                </li>
+                <li class="link-item">
+                  <a href="../privacy page/privacy.html">Privacy Policy</a>
+                </li>
+              </ul>
             </div>
-            <hr>
-            <div class="text-center">
-                <p>&copy; 2023 My Website. All Rights Reserved.</p>
-            </div>
+          </div>
+
+          <div class="footer-socialmedia">
+            <h3 class="footer-socialmedia__heading">Follow Us</h3>
+            <p class="footer-socialmedia__text">
+              Stay in touch with by following us on social media.
+            </p>
+            <ul class="footer-socialmedia__links">
+              <li class="link-item">
+                <a href="#" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </footer>
+      </div>
 
-    <script src="js/app.js" type="module"></script>
+      <p class="copyright">
+        WiseReads&copy;Copyright 2023. Made by Laith Al-Majali
+      </p>
+    </footer>
 
-    <script src="js/forms.js"></script>
+    <!--* End Footer Section -->
+
+
+    <script src="./Javascript/app.js" type="module"></script>
+
+    <script src="./Javascript/forms.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
