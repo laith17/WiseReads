@@ -133,7 +133,11 @@ body {
   display: none;
   cursor: pointer;
 }
-
+.custom-profile-icon {
+  font-size: 36px; /* Adjust the font size to make it larger */
+  color: black; /* Change the color to black */
+  /* Add any other custom styles you want */
+}
 .bar {
   display: block;
   width: 2.5rem;
@@ -141,6 +145,11 @@ body {
   margin: 0.5rem auto;
   transition: all 0.3s ease-in-out;
   background-color: var(--white-color);
+}
+
+.text-dark {
+  font-size: 2.6rem;
+  color: #000;
 }
 
 /** End Header */

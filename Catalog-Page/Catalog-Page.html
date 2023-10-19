@@ -17,6 +17,7 @@
       rel="stylesheet" />
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Books Catalog</title>
   </head>
   <body>
     <!--* Start Header -->
@@ -52,11 +53,19 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </a>
-        <div class="register-btns">
+        <div id="groupBtns" class="register-btns">
           <a href="../log/register.html"> <button id="login">Login</button></a>
           <a href="../log/register.html">
             <button id="signUp">Sign Up</button></a
           >
+        </div>
+        <div
+          class="nav navbar-nav navbar-right"
+          id="profile-icon"
+          style="display: none">
+          <a href="/user-profile/UserProfile.html" class="text-dark"
+            ><i class="fas fa-user px-3 h4 profile"></i
+          ></a>
         </div>
         <div class="hamburger">
           <span class="bar"></span>
@@ -69,7 +78,7 @@
 
     <section class="hero">
       <div class="hero-content">
-        <h1>Catalog Page</h1>
+        <h1>Books Catalog</h1>
       </div>
     </section>
 
@@ -191,5 +200,6 @@
 
     <!--* End Footer Section -->
     <script src="/Catalog-Page/javascript/Catalog-Page.js"></script>
+    <script src="/user-profile/logged.js"></script>
   </body>
 </html>

@@ -130,6 +130,11 @@ body {
   background-color: var(--white-color);
 }
 
+.profile {
+  font-size: 2.6rem !important;
+  color: #000 !important;
+}
+
 /** End Header */
 
 /** Start Footer Section */

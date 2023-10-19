@@ -132,7 +132,7 @@ fetch("http://localhost:3000/books?_start=0&_limit=10")
       const urlSearchParams = new URLSearchParams();
       urlSearchParams.append("id", book["id"]);
       const href =
-        "http://127.0.0.1:5500/Book-Details/Book-Details.html?" +
+        "http://127.0.0.1:5501/Book-Details/Book-Details.html?" +
         urlSearchParams.toString() +
         "&" +
         urlParams;
@@ -174,7 +174,7 @@ fetch("http://localhost:3000/books")
             const urlSearchParams = new URLSearchParams();
             urlSearchParams.append("id", book["id"]);
             const href =
-              "http://127.0.0.1:5500/Book-Details/Book-Details.html?" +
+              "http://127.0.0.1:5501/Book-Details/Book-Details.html?" +
               urlSearchParams.toString() +
               "&" +
               urlParams;
@@ -245,7 +245,7 @@ fetch("http://localhost:3000/books")
           const urlSearchParams = new URLSearchParams();
           urlSearchParams.append("id", book["id"]);
           const href =
-            "http://127.0.0.1:5500/Book-Details/Book-Details.html?" +
+            "http://127.0.0.1:5501/Book-Details/Book-Details.html?" +
             urlSearchParams.toString() +
             "&" +
             urlParams;

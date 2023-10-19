@@ -1,12 +1,12 @@
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/Catalog-Page/images/portadabiblioteca-1600x686.webp");
+    url("../images/Catalog-Page-hero.jpg");
   background-size: cover;
   background-position: center;
   color: #fff;
   text-align: center;
   padding: 100px 0;
-  height: 547px;
+  height: calc(100vh - 9rem);
   position: relative;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 700;
   margin: 0;
   text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);

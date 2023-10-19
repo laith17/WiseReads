@@ -54,9 +54,17 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </a>
-      <div class="register-btns">
-        <a href="./log/register.html"> <button id="login">Login</button></a>
-        <a href="./log/register.html"> <button id="signUp">Sign Up</button></a>
+      <div id="groupBtns" class="register-btns">
+        <a href="log/register.html"> <button id="login">Login</button></a>
+        <a href="log/register.html"> <button id="signUp">Sign Up</button></a>
+      </div>
+      <div
+        class="nav navbar-nav navbar-right"
+        id="profile-icon"
+        style="display: none">
+        <a href="/user-profile/UserProfile.html" class="text-dark"
+          ><i class="fas fa-user px-3 h4 profile"></i
+        ></a>
       </div>
       <div class="hamburger">
         <span class="bar"></span>
@@ -142,6 +150,7 @@
         WiseReads&copy;Copyright 2023. Made by Laith Al-Majali
       </p>
     </footer>
+    <script src="logged.js"></script>
 
     <!--* End Footer Section -->
   </body>
